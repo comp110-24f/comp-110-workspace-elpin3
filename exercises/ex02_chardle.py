@@ -42,12 +42,14 @@ def contains_char(input_word: str, input_letter: str) -> None:
         count += 1
     # Lines 27-41 make my soul hurt. I am thankful for for loops
     if count == 0:
-        print("No instances of " + input_letter + " in " + input_word)
+        print("No instances of " + input_letter + " found in " + input_word)
+    elif count == 1:
+        print(str(count) + " instance of " + input_letter + " found in " + input_word)
     else:
         print(str(count) + " instances of " + input_letter + " found in " + input_word)
 
 
-def main():
+def main() -> None:
     contains_char(input_word=input_word(), input_letter=input_letter())
     """At first declared different variables to store values for input_word() and
     input_letter(). The method in the guide paper was much more efficient
