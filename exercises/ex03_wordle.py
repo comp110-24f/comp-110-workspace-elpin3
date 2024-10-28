@@ -52,11 +52,11 @@ def main(secret: str) -> None:
         userGuess = input_guess(len(secret))
         if userGuess != secret:  # Checks guess is not the secret word
             print(emojified(userGuess, secret))
-            turns += 1
         else:
             print(emojified(userGuess, secret))
             # Still prints emoji version of correct guess
             won = True
+        turns += 1
 
     if turns == 6 and not won:
         # User does not guess the word
@@ -66,4 +66,4 @@ def main(secret: str) -> None:
 
 
 if __name__ == "__main__":
-    main(secret="codess")
+    main(secret="codes")
